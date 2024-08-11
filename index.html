@@ -3,36 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcards par Palier</title>
+    <title>WE'RE NOT REALLY STRANGERS-ISH</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
+            background-image: url('https://www.transparenttextures.com/patterns/light-wool.png');
+            background-size: cover;
         }
         #controls {
             margin: 20px 0;
         }
         #flashcard {
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             background-color: white;
             text-align: center;
             width: 60%;
+            transition: transform 0.3s ease;
+        }
+        #flashcard:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            color: #333;
+            font-weight: 600;
+            font-size: 24px;
         }
         button {
-            margin: 5px;
-            padding: 10px 20px;
+            margin: 10px;
+            padding: 12px 25px;
             border: none;
             border-radius: 5px;
             background-color: #007bff;
             color: white;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
         }
         button.selected {
             background-color: #0056b3;
@@ -53,7 +73,6 @@
 </div>
 
 <script>
-    // Exemple de questions pour chaque palier
     const questions = {
         perception: [
             "Quelle est ta plus grande qualité que tu vois en toi ?",
@@ -74,7 +93,6 @@
 
     let currentPalier = null;
 
-    // Fonction pour afficher une question aléatoire
     function showRandomQuestion() {
         if (currentPalier) {
             const palierQuestions = questions[currentPalier];
@@ -83,7 +101,6 @@
         }
     }
 
-    // Gestion du clic sur un bouton de palier
     document.querySelectorAll('.palier-btn').forEach(button => {
         button.addEventListener('click', function() {
             currentPalier = this.getAttribute('data-palier');
@@ -94,7 +111,6 @@
         });
     });
 
-    // Clic sur le bouton "Prochaine Question"
     document.getElementById('nextQuestionBtn').addEventListener('click', showRandomQuestion);
 </script>
 
