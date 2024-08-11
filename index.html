@@ -84,26 +84,33 @@
     };
 
     let currentPalier = null;
+    let currentIndex = 0;
 
-    function showRandomQuestion() {
+    function showNextQuestion() {
         if (currentPalier) {
             const palierQuestions = questions[currentPalier];
-            const randomIndex = Math.floor(Math.random() * palierQuestions.length);
-            document.getElementById('questionDisplay').innerText = palierQuestions[randomIndex];
+            if (currentIndex < palierQuestions.length) {
+                document.getElementById('questionDisplay').innerText = palierQuestions[currentIndex];
+                currentIndex++;
+            } else {
+                document.getElementById('questionDisplay').innerText = "Vous avez terminé toutes les questions de ce palier.";
+                document.getElementById('nextQuestionBtn').style.display = 'none';
+            }
         }
     }
 
     document.querySelectorAll('.palier-btn').forEach(button => {
         button.addEventListener('click', function() {
             currentPalier = this.getAttribute('data-palier');
-            showRandomQuestion();
+            currentIndex = 0; // Réinitialiser l'index à 0 pour commencer depuis le début
+            showNextQuestion();
             document.getElementById('nextQuestionBtn').style.display = 'inline-block';
             document.querySelectorAll('.palier-btn').forEach(btn => btn.classList.remove('selected'));
             this.classList.add('selected');
         });
     });
 
-    document.getElementById('nextQuestionBtn').addEventListener('click', showRandomQuestion);
+    document.getElementById('nextQuestionBtn').addEventListener('click', showNextQuestion);
 </script>
 
 </body>
