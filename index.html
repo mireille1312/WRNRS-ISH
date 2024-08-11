@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WE'RE NOT REALLY STRANGERS-ISH</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Nunito', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -26,36 +26,34 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            background-color: white;
+            background-color: #FFFFFF;
             text-align: center;
             width: 60%;
-            transition: transform 0.3s ease;
-        }
-        #flashcard:hover {
-            transform: scale(1.05);
+            /* Désactivation de l'animation de mise à l'échelle */
         }
         h1 {
-            color: #333;
+            color: #6A0572; /* Mauve foncé */
             font-weight: 600;
-            font-size: 24px;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
         button {
             margin: 10px;
             padding: 12px 25px;
             border: none;
             border-radius: 5px;
-            background-color: #007bff;
-            color: white;
+            background-color: #FFDD00; /* Jaune vif */
+            color: #6A0572; /* Mauve foncé pour le texte */
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #E0C300; /* Jaune légèrement plus foncé */
             transform: translateY(-3px);
         }
         button.selected {
-            background-color: #0056b3;
+            background-color: #E0C300;
         }
     </style>
 </head>
@@ -68,7 +66,8 @@
 </div>
 
 <div id="flashcard">
-    <h1 id="questionDisplay">Choisissez un palier pour afficher une question</h1>
+    <h1>WE'RE NOT REALLY STRANGERS-ISH</h1>
+    <h2 id="questionDisplay">Choisissez un palier pour afficher une question</h2>
     <button id="nextQuestionBtn" style="display:none;">Prochaine Question</button>
 </div>
 
@@ -80,7 +79,7 @@
             "Quel aspect de notre relation te surprend le plus ?"
         ],
         connexion: [
-            "Quand te sens-tu le plus connecté·e avec moi ?",
+            "Quand te sens-tu le plus connecté(e) avec moi ?",
             "Qu'est-ce qui te donne le plus de réconfort dans notre relation ?",
             "Quel est un souvenir que tu chéris le plus ?"
         ],
