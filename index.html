@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WE'RE NOT REALLY STRANGERS-ISH</title>
+    <title>Flashcards</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -15,8 +15,8 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
-            background-image: url('https://www.transparenttextures.com/patterns/light-wool.png');
+            background-color: #F4F4F4;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Image de fond subtile */
             background-size: cover;
         }
         #controls {
@@ -26,34 +26,28 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            background-color: #FFFFFF;
+            background-color: #6A0572; /* Mauve pour l'encart d'affichage */
+            color: #FFFFFF; /* Texte en blanc */
             text-align: center;
             width: 60%;
-            /* Désactivation de l'animation de mise à l'échelle */
-        }
-        h1 {
-            color: #6A0572; /* Mauve foncé */
-            font-weight: 600;
-            font-size: 28px;
-            margin-bottom: 20px;
         }
         button {
             margin: 10px;
             padding: 12px 25px;
             border: none;
             border-radius: 5px;
-            background-color: #FFDD00; /* Jaune vif */
-            color: #6A0572; /* Mauve foncé pour le texte */
+            background-color: #FFDD00; /* Jaune vif pour les boutons */
+            color: #6A0572; /* Texte mauve sur les boutons */
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
         button:hover {
-            background-color: #E0C300; /* Jaune légèrement plus foncé */
+            background-color: #E0C300; /* Jaune légèrement plus foncé au survol */
             transform: translateY(-3px);
         }
         button.selected {
-            background-color: #E0C300;
+            background-color: #E0C300; /* Jaune foncé lorsqu'un palier est sélectionné */
         }
     </style>
 </head>
@@ -66,7 +60,6 @@
 </div>
 
 <div id="flashcard">
-    <h1>WE'RE NOT REALLY STRANGERS-ISH</h1>
     <h2 id="questionDisplay">Choisissez un palier pour afficher une question</h2>
     <button id="nextQuestionBtn" style="display:none;">Prochaine Question</button>
 </div>
