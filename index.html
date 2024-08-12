@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcards</title>
+    <title>WRNRS-ISH</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -16,7 +16,7 @@
             height: 100vh;
             margin: 0;
             background-color: #F4F4F4;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Image de fond subtile */
+            background-image: url('https://www.vecteezy.com/vector-art/9971516-purple-yellow-gradient-background-abstract-texture-vector-illustration?utm_source=pinterest&utm_medium=social'); /* Image de fond subtile */
             background-size: cover;
         }
         #controls {
@@ -66,79 +66,104 @@
 
 <script>
     const questions = {
-        perception: [
-            "1. Quelle est la première chose que tu as remarquée chez moi ?",
-    "2. Comment décrirais-tu notre première rencontre à quelqu'un d'autre ?",
-    "3. Quelle est ta première impression de moi, et comment a-t-elle changé depuis ?",
-    "4. Quelle est la plus grande qualité que tu vois en moi dès le début ?",
-    "5. Qu'est-ce qui t'a attiré(e) en premier chez moi ?",
-    "6. Penses-tu que les autres nous perçoivent différemment ensemble ?",
-    "7. Qu'est-ce que tu penses que les autres admirent le plus en moi ?",
-    "8. Quelle est la première chose que tu veux apprendre sur quelqu'un de nouveau ?",
-    "9. Comment te sens-tu en ma présence lors de nos premières rencontres ?",
-    "10. Qu'est-ce qui te surprend le plus à mon sujet après avoir appris à me connaître ?",
-    "11. Quelles croyances ou idées préconçues avais-tu sur les relations avant de me rencontrer ?",
-    "12. Si tu devais me décrire à quelqu'un en une phrase, que dirais-tu ?",
-    "13. Quelles différences as-tu remarquées entre nous dès le début ?",
-    "14. Quelle est la première qualité que tu apprécies chez moi ?",
-    "15. Quelle est la chose la plus inattendue que tu as apprise à mon sujet ?",
-    "16. Comment penses-tu que je te vois dès les premiers moments ?",
-    "17. Quelle est la première chose que tu as pensée quand tu m'as vu(e) ?",
-    "18. Qu'est-ce qui t'a donné envie de me connaître davantage ?",
-    "19. Quelle est la première question que tu voulais me poser ?",
-    "20. Quelle est la première chose que tu as remarquée dans mon comportement ?",
-    "21. Quelle impression penses-tu que je laisse aux gens lors de nos premières rencontres ?",
-    "22. Comment nos premières conversations t'ont-elles fait te sentir ?",
-    "23. Quel aspect de ma personnalité as-tu découvert en premier ?",
-    "24. Quelle partie de moi t'a semblé la plus mystérieuse au début ?",
-    "25. Quelle couleur me représenterait le mieux et pourquoi ?",
-    "26. Qu'est-ce que tu as perçu chez moi qui t'a rendu(e) curieux(se) ?",
-    "27. Qu'est-ce que tu pensais de moi avant de vraiment me connaître ?",
-    "28. Quelle est la première chose que tu voulais partager avec moi ?",
-    "29. Quelle était ta plus grande crainte au moment de faire connaissance avec moi ?",
-    "30. Qu'est-ce qui t'a rassuré(e) en apprenant à me connaître ?",
-    "31. Quelle a été ta première impression sur ma manière de communiquer ?",
-    "32. Qu'est-ce que tu as remarqué chez moi qui t'a semblé unique ?",
-    "33. Quelle est la première chose que tu voudrais changer à propos de notre rencontre ?",
-    "34. Qu'est-ce qui t'a fait sourire la première fois que tu m'as vu(e) ?",
-    "35. Comment te sentais-tu juste avant notre première rencontre ?",
-    "36. Quelle partie de toi penses-tu que je vois clairement, mais que les autres ne perçoivent pas ?",
-    "37. Qu'est-ce qui te surprend le plus dans la façon dont nous interagissons ?",
-    "38. Quelle est la première qualité que tu as remarquée en moi et que tu chéris ?",
-    "39. Qu'est-ce que tu as appris sur toi-même en me rencontrant ?",
-    "40. Quelle impression veux-tu laisser quand tu rencontres quelqu'un de nouveau ?",
-    "41. Quelle est la première chose que tu as remarqué dans mon apparence ?",
-    "42. Qu'est-ce que tu pensais de notre connexion après notre première rencontre ?",
-    "43. Comment décrirais-tu notre dynamique aux autres après nous être rencontrés ?",
-    "44. Quelle est la chose la plus naturelle que tu as ressentie en ma présence dès le début ?",
-    "45. Quelle est la première chose que tu as voulu partager avec moi de ta vie personnelle ?",
-    "46. Comment décrirais-tu notre première conversation à quelqu'un qui n'était pas là ?",
-    "47. Qu'est-ce qui t'a fait penser que nous pourrions bien nous entendre ?",
-    "48. Qu'est-ce que tu as ressenti lorsque nous avons échangé nos premières paroles ?",
-    "49. Qu'est-ce qui t'a semblé le plus intrigant à propos de notre première rencontre ?",
-    "50. Quelle est la chose que tu aimerais revivre de notre première rencontre ?",
-    "51. Quelle est la première impression que tu penses avoir laissée sur moi ?",
-    "52. Qu'est-ce que tu as immédiatement aimé chez moi ?",
-    "53. Quelle est la chose la plus importante que tu as apprise de notre première rencontre ?",
-    "54. Quelle partie de notre première interaction t'a fait te sentir à l'aise ?",
-    "55. Quelle est la première chose que tu as ressentie en voyant mon sourire ?",
-    "56. Comment as-tu perçu mon regard la première fois que nous nous sommes rencontrés ?",
-    "57. Quelle est la première qualité que tu as trouvée admirable chez moi ?",
-    "58. Quelle est la première chose que tu veux toujours savoir sur quelqu'un de nouveau ?",
-    "59. Quelle est la première impression que tu as eue de moi et qui est restée ?",
-    "60. Qu'est-ce qui t'a fait penser que je pourrais être quelqu'un d'important pour toi ?"
-        ],
-        connexion: [
-            "1. Quand te sens-tu le plus connecté(e) avec moi ?",
-            "2. Qu'est-ce qui te donne le plus de réconfort dans notre relation ?",
-            "3. Quel est un souvenir que tu chéris le plus ?"
-        ],
-        reflexion: [
-            "1. Quelle est la plus grande leçon que tu as apprise grâce à notre relation ?",
-            "2. Qu'est-ce qui t'inspire à aller de l'avant dans notre relation ?",
-            "3. Comment notre relation a-t-elle changé ta vision de l'amour ?"
-        ]
-    };
+    perception: [
+        "1. Qu'est-ce que tu as pensé de moi la première fois que tu m'as vu·e ?",
+        "2. Quelle est la première chose que tu as remarquée chez moi ?",
+        "3. Qu'est-ce qui, selon toi, nous rend unique en tant que couple ?",
+        "4. Quelle question t'a traversé l'esprit la première fois que nous nous sommes rencontrés ?",
+        "5. Comment décrirais-tu notre connexion en un mot ?",
+        "6. Quelle partie de ma personnalité t'a le plus surpris·e au fil du temps ?",
+        "7. Que penses-tu que je ressens quand je suis avec toi ?",
+        "8. Quelle est la chose la plus marquante que tu as découverte sur moi jusqu'à présent ?",
+        "9. Comment penses-tu que les autres perçoivent notre relation ?",
+        "10. Qu'est-ce que tu penses que je pense de toi, mais que je ne t'ai jamais dit ?",
+        "11. Qu'est-ce que tu espérais apprendre sur moi au fil du temps ?",
+        "12. Si tu devais me décrire à une personne qui ne me connaît pas, que dirais-tu ?",
+        "13. Quelle partie de moi te semble la plus mystérieuse ?",
+        "14. Qu'est-ce que tu as découvert sur moi qui t'a surpris·e ?",
+        "15. Quelle question aurais-tu voulu que je te pose au début de notre relation ?",
+        "16. Qu'est-ce que tu penses que je trouve fascinant chez toi ?",
+        "17. Qu'est-ce que tu penses que je ne vois pas en toi mais que je devrais remarquer ?",
+        "18. Quelle est la chose la plus inattendue que tu as apprise sur moi ?",
+        "19. Si tu pouvais me poser une question que tu n'as jamais osé poser, quelle serait-elle ?",
+        "20. Qu'est-ce que tu as ressenti en me voyant pour la première fois ?",
+        "21. Qu'est-ce que tu aimerais savoir de moi que tu ne m'as jamais demandé ?",
+        "22. Quelle est la chose la plus importante que tu as appris sur moi depuis que nous nous sommes rencontrés ?",
+        "23. Qu'est-ce qui t'a le plus surpris dans ma façon de penser ou de réagir ?",
+        "24. Quelle est la chose en moi que tu trouves la plus intrigante ?",
+        "25. Si tu devais choisir un mot pour me décrire, lequel serait-il ?",
+        "26. Qu'est-ce que tu penses que je remarque le plus chez toi quand nous sommes ensemble ?",
+        "27. Si tu pouvais voir à travers mes yeux, que penses-tu que je vois en toi ?",
+        "28. Qu'est-ce qui, selon toi, me rend différent·e des autres personnes que tu as rencontrées ?",
+        "29. Qu'est-ce que tu penses que je ressens pour toi, mais que je n'ai jamais exprimé ?",
+        "30. Si tu devais deviner ce que je pense de toi en ce moment, que dirais-tu ?"
+    ],
+    connexion: [
+        "1. Quelle est la chose la plus vulnérable que tu as partagée avec moi jusqu'à présent ?",
+        "2. Quand te sens-tu le plus connecté·e à moi ?",
+        "3. Qu'est-ce qui te donne le plus de réconfort quand nous sommes ensemble ?",
+        "4. Quelle est la dernière chose que tu as découverte sur moi qui t'a surpris·e ?",
+        "5. Comment penses-tu que notre connexion a évolué depuis le début ?",
+        "6. Quelle est la chose que tu aimerais partager avec moi, mais que tu n'as pas encore osé dire ?",
+        "7. Quel moment précis dans notre relation t'a fait te sentir profondément compris·e ?",
+        "8. Qu'est-ce qui te fait te sentir aimé·e de manière inconditionnelle par moi ?",
+        "9. Quel est le souvenir que tu chéris le plus de notre relation ?",
+        "10. Quelle est la chose que tu penses que nous devrions explorer davantage ensemble ?",
+        "11. Comment te sens-tu quand tu es le·la plus vulnérable avec moi ?",
+        "12. Quelle est la chose que tu aimerais que je sache sur toi, mais que tu n'as jamais osé partager ?",
+        "13. Qu'est-ce qui te fait te sentir le·la plus vu·e par moi ?",
+        "14. Quelle est la chose que tu apprécies le plus dans notre connexion ?",
+        "15. Qu'est-ce qui te fait te sentir en sécurité avec moi ?",
+        "16. Quelle est la chose que tu trouves la plus spéciale dans notre relation ?",
+        "17. Quel est le moment où tu t'es senti·e le·la plus proche de moi ?",
+        "18. Comment penses-tu que je te vois lorsque nous sommes ensemble ?",
+        "19. Quelle est la chose la plus importante que tu as partagée avec moi jusqu'à présent ?",
+        "20. Comment te sens-tu quand tu es seul·e après avoir passé du temps avec moi ?",
+        "21. Quelle est la chose en moi qui t'a le plus touché·e émotionnellement ?",
+        "22. Qu'est-ce que tu penses que je ressens pour toi que je n'ai jamais exprimé ?",
+        "23. Comment penses-tu que je te vois quand tu es le·la plus vulnérable ?",
+        "24. Qu'est-ce que tu penses que nous partageons qui est unique à notre connexion ?",
+        "25. Quelle est la chose que tu trouves la plus réconfortante dans notre relation ?",
+        "26. Quelle est la chose que tu trouves la plus rassurante dans notre connexion ?",
+        "27. Qu'est-ce que tu as appris sur toi-même grâce à notre relation ?",
+        "28. Quelle est la chose en moi qui t'a aidé·e à grandir ?",
+        "29. Qu'est-ce qui te donne le plus d'espoir pour notre avenir ensemble ?",
+        "30. Qu'est-ce qui te fait te sentir profondément compris·e par moi ?"
+    ],
+    reflexion: [
+        "1. Qu'est-ce que notre relation t'a appris sur toi-même que tu ne savais pas avant ?",
+        "2. Comment notre relation a-t-elle changé ta perception des relations en général ?",
+        "3. Quel est le plus grand défi que tu vois pour nous dans l'avenir ?",
+        "4. Comment penses-tu que notre relation a évolué depuis le début ?",
+        "5. Qu'est-ce que tu penses que nous devons travailler ensemble pour renforcer notre lien ?",
+        "6. Qu'est-ce que tu espères pour notre relation dans les prochaines années ?",
+        "7. Comment penses-tu que notre relation a influencé tes croyances ou valeurs ?",
+        "8. Qu'est-ce qui t'inquiète le plus pour notre avenir ensemble ?",
+        "9. Quelle est la plus grande leçon que tu as apprise grâce à notre relation ?",
+        "10. Comment penses-tu que notre relation pourrait inspirer les autres ?",
+        "11. Qu'est-ce que tu voudrais améliorer dans notre relation pour l'avenir ?",
+        "12. Comment penses-tu que notre relation t'a aidé·e à évoluer en tant que personne ?",
+        "13. Qu'est-ce que tu trouves le plus gratifiant dans notre relation ?",
+        "14. Qu'est-ce qui te rend le·la plus fier·ère dans notre relation ?",
+        "15. Quelle est la chose que tu trouves la plus émouvante dans notre relation ?",
+        "16. Comment penses-tu que nous pouvons continuer à grandir ensemble ?",
+        "17. Qu'est-ce qui te donne le plus de motivation pour continuer à investir dans notre relation ?",
+        "18. Qu'est-ce que tu trouves le plus transformateur dans notre relation ?",
+        "19. Comment penses-tu que notre relation pourrait évoluer dans les prochaines années ?",
+        "20. Qu'est-ce que tu trouves le plus libérateur dans notre relation ?",
+        "21. Quelle est la chose que tu trouves la plus essentielle pour le succès de notre relation ?",
+        "22. Comment penses-tu que notre relation a changé ta vision de l'amour ?",
+        "23. Qu'est-ce qui te donne le plus d'espoir pour l'avenir de notre relation ?",
+        "24. Qu'est-ce qui te rend le·la plus reconnaissant·e pour notre relation ?",
+        "25. Qu'est-ce que tu trouves le plus inspirant dans notre relation ?",
+        "26. Comment penses-tu que notre relation a impacté ta vie de manière positive ?",
+        "27. Quelle est la chose que tu trouves la plus enrichissante dans notre relation ?",
+        "28. Qu'est-ce qui te donne envie de continuer à explorer notre relation ?",
+        "29. Qu'est-ce qui te fait croire que nous pouvons surmonter n'importe quel obstacle ensemble ?",
+        "30. Comment penses-tu que notre relation a contribué à ton épanouissement personnel ?"
+    ]
+};
+
 
     let currentPalier = null;
     let currentIndex = 0;
